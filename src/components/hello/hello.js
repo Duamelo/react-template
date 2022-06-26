@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 
 export default function Hello(){
+
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    document.title = `Vous avez cliqué ${count} fois`;
+  });
   return (
     <>
-      <h1> Hello world</h1>
+    <div>
+
+    <p>Vous avez cliqué {count} fois</p>
+    <button onClick={() => setCount(count + 1)}>
+        Cliquez ici
+      </button>
+
+    </div>
+
     </>
   )
 }

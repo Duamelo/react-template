@@ -1,12 +1,11 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-// import Hello from './components/hello/hello';
-import Dashboard from './views/dashboard/dashboard';
+import Hello from './components/hello/hello';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard/>}/>
+        <Route path="/" element={<Hello/>}/>
       </Routes>
     </Router>
   );
